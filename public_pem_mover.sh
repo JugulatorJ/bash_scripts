@@ -1,5 +1,11 @@
 #! /bin/bash
 
+
+# As a Windows user, I use WSL to work with the Linux Ubuntu OS on the same physical device. The default download manager downloads files to the Windows OS directory. 
+# To streamline the process of SSH connection to AWS labs provided by the AWS re/Start program, I've created this small script. 
+# It changes the directory to the Windows default download folder where the .pem file is located, then it copies the file to the Linux directory, changes the file permissions of the .pem, and SSHs to the specified IP address. 
+#You'll need to personalize the script to use it.
+
 echo Switchig directory to Windows default Downloads dir
 cd /mnt/c/Users/ # <provide source Windows directory>
 echo Force move file to  # <provide target Linux directory for verbose purpose>
